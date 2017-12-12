@@ -1,0 +1,64 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>风情旅游</title>
+<link href="css/animate.css" type="text/css" rel="stylesheet" />
+<link href="css/dongtai.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/move.js"></script>
+<script src="js/dongtaiData.js"></script>
+<script src="js/dongtai.js"></script>
+<script src="js/scrollTop.js"></script>
+</head>
+
+<body>
+	 <!--头部-->
+    <div class="head" style="z-index:10; position:absolute"></div>
+	<!--列表-->
+	<div class="box">
+		<div class="content_wrap">
+   
+        <h1 class="title_big">风情旅游</h1>
+        <h2>Ethnic Tourism</h2>
+        <div class="list_content" id="articleList">
+            	<div class="img_wrap"><img src="" /></div>
+            	<div class="content_text">
+                	<div class="title_small"></div>
+                    <div class="date"></div>
+                    <p></p>
+               </div>
+            </div>
+        </div>
+        
+        <div class="list_more" id="listMore"></div>
+        
+    </div>
+	</div>
+    
+    <!--模板-->
+    <div id="itemHtml" style="display:none;">
+    	<div class="content_one" articleid="$articleId$">
+            <div class="img_wrap"><img src="$articleCover$"></div>
+            <div class="content_text">
+               	<div class="title_small">$articleTitle$</div>
+                <div class="date">$updateTime$</div>
+                <p>$describe$</p>
+            </div>
+            
+        </div>
+    </div>
+    
+   
+    
+    <!--底部-->
+    <div class="foot"></div>    
+    <!--返回顶部-->
+    <div class="fixed_tip" id="scrollTop_wrap">
+    	<div class="scroll_top" id="scrollTop"></div>
+        <div class="fixed_contactus"></div>
+    </div>
+
+</body>
+</html>

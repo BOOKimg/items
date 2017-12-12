@@ -1,0 +1,132 @@
+@charset "utf-8";
+.box{
+	width:100%;
+	height:100%;
+	background:#d4dafe;
+}
+.content_wrap{
+	width:1100px;
+	margin:0 auto;
+	min-height:500px;
+	padding-top:120px;
+	overflow:hidden;
+}
+
+.content_wrap > .title_big, .content_wrap > h2{
+	text-align:center;
+	font-size:54px;
+	color:#1e4b6d;
+}
+.content_wrap > .title_big{
+	line-height:60px;
+}
+.content_wrap > h2{
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	font-size:18px;
+	letter-spacing:6px;
+}
+
+.content_wrap > img{
+	margin:0 auto;
+	display:block;
+	margin-top:15px;
+}
+
+.title_list .pen{
+	width:61px;
+	height:58px;
+	background:url(../img/pen_article.png) no-repeat;
+	position:absolute;
+	right:0px;
+	top:7px;
+	cursor:pointer;
+}
+
+.list_content{
+	padding-top:40px;
+	overflow:hidden;
+	width:1130px;
+}
+
+/*单个列表样式*/
+.content_one{
+	width:330px;
+	height:202px;
+	float:left;
+	background:#fff;
+	padding-bottom:30px;
+	margin:0 44px 30px 0;
+	border-radius:26px;
+	cursor:pointer;
+	position:relative;
+}
+.content_one .list_img_over_xiaojiantou{
+	position:absolute;
+	left:0px;
+	top:36px;
+}
+.content_one:hover{
+	
+	animation: pulse 2s;
+}
+.content_one:hover .list_img_over_xiaojiantou{
+	
+	top:36px;
+	left:50px;
+
+}
+.content_one .img_wrap{
+	height:168px;
+	width:260px;
+	overflow:hidden;
+	margin:15px auto;
+}
+.content_one .img_wrap img{
+	width:260px;
+	margin:0 auto;
+	display: block;
+}
+.content_one .content_text{
+	width:330px;
+	float:left;
+}
+.content_one .title_small{
+	font-size:20px;
+	color:#454548;
+	line-height:26px;
+	max-height:53px;
+	overflow:hidden;
+	text-align:center;
+}
+.content_one .date{
+	color:#6b6a6f;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	padding-top:2px;
+}
+.content_one p{
+	padding-top:8px;
+	color:#47464a;
+	line-height:25px;
+	max-height:75px;
+	overflow:hidden;
+	font-family:楷体;
+	letter-spacing:0px;
+}
+
+.list_more{
+	height:58px;
+	width:58px;
+	background:url(../img/lis_more_btn_bg.png) no-repeat 0 -58px;
+	margin:15px auto 130px;
+	cursor:pointer;
+}
+.list_more:hover{
+	animation:pulse 2s;
+	background:url(../img/lis_more_btn_bg.png) no-repeat 0 0;
+	
+}
+
+
+

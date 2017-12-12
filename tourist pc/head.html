@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>头部</title>
+	 <script src="./js/jquery-1.12.4.js"></script>
+	 <link href="css/animate.css" type="text/css" rel="stylesheet" />
+
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			list-style:none;
+			text-decoration:none;
+		}
+		
+		.head{
+			width:100%;
+			height:80px;
+			background:rgba(0,0,0,0.2);
+			position:relative;
+		}
+		.left{
+			margin-left:200px;
+		}
+		.left>span{
+			font:40px 微软雅黑;
+			color:white;
+			line-height:80px;
+		}
+		.left>span:hover{
+			color:lightseagreen;
+		}
+		.rg{
+			position:absolute;
+			top:38px;
+			right:200px;
+			
+		}
+		.rg a{
+			color:#fff;
+		}
+		.rg li{
+			float:left;
+			margin-left:40px;
+			position:relative;
+		}
+		.rg .spe img{
+		
+			position:absolute;
+
+		}
+		.rg .spe img:hover{
+			transform: rotate(360deg);
+			cursor:pointer;
+			transition: 2s;
+		}
+		ol{
+			/*width:108px;*/
+			height:220px;
+			position:relative;
+			left:-60px;
+			position:absolute;
+			display:none;		
+			padding-right:20px;
+			z-index:10;
+			top:18px;
+			background:rgba(0,0,0,0.2);
+		}
+		ol li{
+			width:100px;
+			height:20px;
+			clear:both;
+			margin-top:14px;
+			text-align: center;
+			
+			
+		}
+		ol li a:hover{
+			animation:pulse 2s;
+			color:lightseagreen;
+			font-weight:600;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="head">
+		<div class="left">
+			<span>LOGO TOURISM</span>
+		</div>
+		
+			<ul class="rg">
+				<li><a href="./index.html">首页</a></li>
+				<li class="spe" id="sp1"><a href="./情怀之旅.html">情怀之旅</a><img src="./img/nav_xiajiantou.png"/>
+					 <ol class="one">
+	                    <li><a href="./情怀之旅.html">自驾</a></li>
+	                    <li><a href="./情怀之旅.html">黄石公园</a></li>
+	                    <li><a href="./情怀之旅.html">五大连池</a></li>
+	                    <li><a href="./情怀之旅.html">白云山</a></li>
+	                    <li><a href="./情怀之旅.html">返回主页</a></li>
+                	</ol> 
+				</li>
+				<li><a href="./风情旅游.html">风情旅游</a></li>
+				<li class="spe" id="sp2"><a href="">国内经典<img src="./img/nav_xiajiantou.png"/></a>
+					<ol class="two" style="height:120px">
+	                    <li><a href="article.html?type=companyIdea">羌山之旅</a></li>
+	                    <li><a href="article.html?type=companyCulture">静心拉萨</a></li>
+	                    <li><a href="article.html?type=companyEnvironment">象牙之塔</a></li>
+                	</ol> 
+				</li>
+				<li class="spe" id="sp3"><a href="">拒绝拥挤<img src="./img/nav_xiajiantou.png"/></a>
+					<ol class="three" style="height:120px">
+	                    <li><a href="article.html?type=talents">波斯卡尚</a></li>
+	                    <li><a href="article.html?type=team">圣托里尼</a></li>
+	                    <li><a href="article.html?type=joinUs">苏格兰</a></li>
+                	</ol> 
+				</li>
+				<li><a href="article.html?type=tellUs">感悟极光</a></li>  
+			</ul>
+	</div>
+</body>
+</html>
+<script>
+		$("#sp1").hover(
+			function(){
+				$(".one").stop().slideDown()
+			},
+			function(){
+				$(".one").stop().slideUp()
+			}
+		)
+		$("#sp2").hover(
+			function(){
+				$(".two").stop().slideDown()
+			},
+			function(){
+				$(".two").stop().slideUp()
+			}
+		)
+		$("#sp3").hover(
+			function(){
+				$(".three").stop().slideDown()
+			},
+			function(){
+				$(".three").stop().slideUp()
+			}
+		)
+		
+</script>
