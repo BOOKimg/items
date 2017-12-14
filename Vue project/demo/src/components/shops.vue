@@ -38,7 +38,7 @@
 			get() {
 				var This=this
 				this.$axios({
-					url: '../../static/new_file.json',
+					url: 'https://api-test.glbuyer.com/v1/activity/promoterViewShippingFree4px/kyigi',
 					method: 'get',
 				}).then(function(response) { //如果接口走通了
 					console.log(response.data.data.components)
