@@ -9,13 +9,13 @@
 		data(){
 			return{
 				list:[{
-					'name':'商品组1'
+					'name':'商品组1 |'
 				},{
-					'name':'商品组2'
+					'name':'商品组2 |'
 				},{
-					'name':'商品组3'
+					'name':'商品组3 |'
 				},{
-					'name':'商品组4'
+					'name':'商品组4 |'
 				},{
 					'name':'商品组5'
 				},]
@@ -26,6 +26,6 @@
 
 <style scoped>
 	span{
-		margin-left:10px;
+		margin-left:7px;
 	}
 </style>
