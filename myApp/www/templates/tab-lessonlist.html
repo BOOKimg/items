@@ -1,0 +1,72 @@
+<ion-view>
+<style>
+	.select-on{
+		color: #387ef5;
+	}
+	/*.lesson>.item,.scroll{
+		background:#181c26;
+		color: #fff;
+	}*/
+</style>
+
+	<ion-nav-title>
+		 <ion-header-bar class="item-input-inset">
+	    	<label class="item-input-wrapper">
+	    			<i class="icon ion-ios-search placeholder-icon"></i>  
+	           <input type="search" placeholder="Search" ng-model="searchContent">
+	        </label>
+	    </ion-header-bar>
+	</ion-nav-title>
+  <ion-content>
+  		<ion-refresher                
+	       pulling-text="下拉刷新..."                
+	       on-refresh="pageContext.doRefresh()">  
+	     </ion-refresher>
+     
+     
+ 		<div class="list" style="margin-bottom: 0;">
+ 			<div class="item row stable-bg" style="text-align: center;border-left: 0 none;border-right: 0 none;padding-bottom: 0;">
+ 				<span class="col col-50" style="border-right: 1px solid silver;padding: 10px 0;"  on-touch="onTap()">资讯<i class="icon ion-chevron-down"></i></span>
+ 				<span class="col col-50" style="padding: 10px 0;" on-touch='ontouch()'>攻略<i class="icon ion-chevron-down"></i></span>
+ 				
+ 			</div>
+ 		</div>
+ 		<div class="list" ng-hide='off'>
+ 			<div class="item row stable-bg" style="text-align: center;border-left: 0 none;border-right: 0 none;">
+ 				<span class="col col-25"><button class="button button-light">全部</button></span>
+ 				<span class="col col-25"><button class="button button-light">公告</button></span>
+ 				<span class="col col-25"><button class="button button-light">更新</button></span>
+ 				<span class="col col-25"><button class="button button-light">新闻</button></span>
+ 				
+ 			</div>
+ 			
+ 		</div>
+ 		
+ 		
+ 		<div class="list" ng-hide=offed>
+ 			<div class="item row stable-bg" style="text-align: center;border-left: 0 none;border-right: 0 none;">
+ 				<span class="col col-50">全部</span>
+ 			</div>
+ 			<div class="item row stable-bg" style="text-align: center;border-left: 0 none;border-right: 0 none;">
+ 				<span class="col col-50">不知道是啥</span>
+ 			</div>
+ 			<div class="item row stable-bg" style="text-align: center;border-left: 0 none;border-right: 0 none;">
+ 				<span class="col col-50">随便啥吧</span>
+ 			</div>
+ 		</div>
+ 		
+ 		
+ 		
+ 		 <div class="list lesson" style="margin-top: 20px;">
+			<div class="item item-image  item-thumbnail-left meisha" ng-repeat="x in list3" >
+					<img ng-src="{{x.Url}}" style="max-width:3.6rem">
+					<h2>{{x.title}}</h2>
+					<p>{{x.text}}</p>
+			</div>
+		</div>
+		<ion-infinite-scroll
+			on-infinite="loadMore()"
+			distance="1%">
+		</ion-infinite-scroll>
+  </ion-content>
+</ion-view>

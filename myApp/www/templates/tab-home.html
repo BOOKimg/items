@@ -1,0 +1,96 @@
+<ion-view>
+	<style>
+		.sy{
+			height: 5.5rem;
+		}
+		.sy>img{
+			width: 100%;
+			
+		}
+		
+	</style>
+	<ion-nav-title>
+		 <ion-header-bar class="item-input-inset">
+	    	<ion-nav-button side="left">
+	    			<img src="img/photo.jpg" style="width: 35px;border-radius: 50%; margin:13px 15px 0px 0px;"/>
+	    	</ion-nav-button>
+	    	<label class="item-input-wrapper">
+	            <input type="search" placeholder="Search" ng-model="searchContent">  
+	        </label>
+	    			<button class="button button-clear icon ion-ios-search placeholder-icon"></button>
+	    </ion-header-bar>
+	</ion-nav-title>
+	
+	<ion-content style='background: #F1F2F3;'>
+	<div style="margin:0 5px;">
+		    <ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="true" auto-play="true">
+				<ion-slide class="sy">
+					<img src="./img/A12-2.png" alt=""/>
+				</ion-slide>
+				<ion-slide  class="sy">
+					<img src="./img/A13-3.png" alt=""/>
+				</ion-slide>
+				<ion-slide  class="sy">
+					<img src="./img/A9-3.png" alt=""/>
+				</ion-slide>
+		</ion-slide-box>
+		</div>
+
+
+		
+		
+    <div class="list">
+    	 <div class="item item-button-right">
+	         	<h2>最近关注</h2> 
+	          <span class="button button-light rightsp">
+	          			MORE
+	          		<i class="icon ion-chevron-right" id="rightjian"></i>
+	          </span>
+	        </div>
+			<div class="item row lie" ng-repeat="x in list">
+				<div class="col col-50" ng-repeat="y in x">
+					<div class="imgg">
+						<img ng-src="{{y.Url}}" style="width:100%;height:92px;border-radius:10px;box-shadow: 0px 0px 10px silver;">
+					</div>
+					<h2>{{y.title}}</h2>
+					<p>{{y.text}}</p>
+				</div>
+			</div>
+		</div>
+		
+		
+		 <div class="list card">
+    	 <div class="item item-button-right">
+	         	<h2>最新攻略</h2> 
+	          <span class="button button-light rightsp">
+	          			更多
+	          		<i class="icon ion-chevron-right" id="rightjian"></i>
+	          </span>
+	        </div>
+			<div class="item row lie" ng-repeat="x in lesson">
+				<div class="col col-50" ng-repeat="y in x">
+					<div class="imgg">
+						<img ng-src="{{y.Url}}" style="width: 100%;box-shadow: 0px 0px 2px silver;">
+					</div>
+					<h2>{{y.title}}</h2>
+					<p>{{y.text}}</p>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		 <div class="list card">
+    	 <div class="item item-button-right">
+	         	<h2>猜你喜欢</h2> 
+	        </div>
+			<div class="item item-image  item-thumbnail-left meisha" ng-repeat="x in list2" >
+					<img ng-src="{{x.Url}}" style="border-radius: 10px;" id="chang">
+					<h2>{{x.title}}</h2>
+					<p>{{x.text}}</p>
+			</div>
+		</div>
+		
+	</ion-content>
+</ion-view>
+

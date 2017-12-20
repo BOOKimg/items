@@ -1,0 +1,38 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+
+<ion-view view-title="登录"  hide-nav-bar="true" style="background: url(./img/person_01.png);">
+		  
+    <ion-content  style="padding: 150px 10px 0;">
+				<div style="width: 120px ; height: 120px;border-radius: 50%; overflow: hidden; margin: auto; text-align: center;line-height: 120px;">
+					<img src="./img/photo.jpg"/ style="width: 100%; height: 100%;">
+				</div>
+        <form name="myForm" ng-submit="signIn()">
+            <div class="list list-inset removePM" style="background: rgba(255,255,255,.4);">
+            		
+                <label class="item item-input" style="background: transparent">
+                    <input type="text" name="txtUserName" placeholder="请输入用户名" ng-model="user.username" required>
+                </label>
+                <label class="item item-input" style="background: transparent">
+                    <input type="password" name="txtPwd" placeholder="请输入密码" ng-model="user.password" required>
+                </label>
+            </div>
+            <div class="row list-borderless">
+                <div class="col col-center"><a href="#/tab/personal/change">忘记密码？</a></div>
+                <div class="col col-center" style="text-align: right;"><a href="#/tab/personal/register">注册</a></div>
+            </div>
+
+            <div class="padding">
+                <button class="button button-block button-positive" type="submit" ng-click='login()'>
+                   		开始你的旅途
+                </button>
+            </div>
+        </form>
+
+
+    </ion-content>
+</ion-view>
