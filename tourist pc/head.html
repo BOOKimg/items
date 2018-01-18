@@ -2,6 +2,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrom=1"/>
+	<meta name="HandheldFriendly" content="true"/>
 	<title>头部</title>
 	 <script src="./js/jquery-1.12.4.js"></script>
 	 <link href="css/animate.css" type="text/css" rel="stylesheet" />
@@ -124,26 +127,17 @@
 <script>
 		$("#sp1").hover(
 			function(){
-				$(".one").stop().slideDown()
-			},
-			function(){
-				$(".one").stop().slideUp()
+				$(".one").toggle('slow')
 			}
 		)
 		$("#sp2").hover(
 			function(){
-				$(".two").stop().slideDown()
-			},
-			function(){
-				$(".two").stop().slideUp()
+				$(".two").toggle('slow')
 			}
 		)
 		$("#sp3").hover(
 			function(){
-				$(".three").stop().slideDown()
-			},
-			function(){
-				$(".three").stop().slideUp()
+				$(".three").toggle('slow')
 			}
 		)
 		
